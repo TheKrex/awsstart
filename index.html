@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sgt. Krex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script text="text/javascript">
+        function searchOnGoogle() {
+            var query = document.getElementById('gquery').value;
+            window.location.href = 'https://www.google.de/search?q=' + query;
+        }
+
+        function searchOnYoutube() {
+            var query = document.getElementById('yquery').value;
+            window.location.href = 'https://www.youtube.com/search?q=' + query;
+        }
+
+        function googleTranslate() {
+            var query = document.getElementById('tquery').value;
+            window.location.href = 'https://translate.google.com/?hl=de#auto/de/' + encodeURI(query);
+        }
+    </script>
+    <style type="text/css">
+        body {
+            background-color: #000000;
+        }
+
+        #main {
+            padding: 10px;
+        }
+
+        .yt-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .my-box {
+            background-color: rgb(255, 255, 255);
+            margin: 5px;
+            padding: 10px;
+            border: solid;
+            border-color: #00adee;
+            border-width: 5px;
+        }
+
+        .logo {
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col my-box">
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="http://steamcommunity.com/my"><img src="https://i.imgur.com/8RxAj3W.png"
+                                    alt="Steam" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://www.twitch.tv/"><img src="https://i.imgur.com/afp9aSg.png"
+                                    alt="Twitch" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://www.humblebundle.com/"><img src="https://i.imgur.com/v0Oz1sF.png"
+                                    alt="HumbleBundle" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://www.watch2gether.com/rooms/armywithstyle-z00ghcj7grmy0yy1zn"><img
+                                    src="https://i.imgur.com/vQi7tee.png" alt="Watch2Gether" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://www.kinguin.net/"><img src="https://i.imgur.com/xts13LB.png"
+                                    alt="Kinguin" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://www.amazon.de/"><img src="https://i.imgur.com/loGVmwG.png"
+                                    alt="Amazon" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://de.socialclub.rockstargames.com/events"><img src="https://i.imgur.com/hQbPpBo.png"
+                                    alt="Social Club" width="50" height="50"></a></div>
+                    </div>
+                    <div class="col-sm text-center">
+                        <div class="logo"><a href="https://csgostash.com/"><img src="https://i.imgur.com/fiCkq3n.png"
+                                    alt="CS:GO Stash" width="50" height="50"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-box">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Suchbegriff" aria-label="Google"
+                        aria-describedby="button-addon-g" id="gquery">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon-g" onclick="searchOnGoogle()">Google</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Suchbegriff" aria-label="Youtube"
+                        aria-describedby="button-addon-y" id="yquery">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon-y" onclick="searchOnYoutube()">Youtube</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Text" aria-label="Translate" aria-describedby="button-addon-t"
+                        id="tquery">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon-t" onclick="googleTranslate()">Übersetzen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col my-box">
+                <div class="yt-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/CIdePRxg3cY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="video"></iframe>
+                </div>
+
+            </div>
+            <div class="col my-box">
+                <div class="yt-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/lL7jwhWAU_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="video"></iframe>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
